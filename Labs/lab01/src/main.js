@@ -257,16 +257,19 @@ drawSelection.addEventListener("change", (event) => {
     switch(selection) {
         case "midpoint": 
             painter.changeDrawingMode(DRAW_CIRCLE);
+            painter.clear();
             title.innerHTML = "Midpoint Algorithm";
             break;
         case "dda": 
             painter.changeDrawingMode(DRAW_LINE);
             painter.changeDrawLineImplementation(ddaDrawLine);
+            painter.clear();
             title.innerHTML = "DDA Algorithm";
             break;
         case "bresenham": 
             painter.changeDrawingMode(DRAW_LINE);
             painter.changeDrawLineImplementation(bresenhamDrawLine);
+            painter.clear();
             title.innerHTML = "Bresenham Algorithm";
             break;
     }
