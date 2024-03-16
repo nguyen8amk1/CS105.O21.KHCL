@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <title>DDA</title>
+        <link href="style/main.css" rel="stylesheet" type="text/css">
+        <style>
+           body, html {
+                height: 100%;
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .container {
+                text-align: center;
+            }
+
+            canvas {
+                border: 1px solid black;
+            }
+
+        </style>    
+    </head>
+
+    <body>
+        <div class="container">
+            <label for="cars">Choose a Draw Option:</label>
+
+            <select name="draw" id="draw-options">
+              <option value="dda">DDA</option>
+              <option value="bresenham">Bresenham</option>
+              <option value="midpoint">Midpoint</option>
+            </select>
+
+            <div class="heading">
+                <h1 id="title"> DDA Algorithm </h1>
+                <h3 class="author"> UIT </h3>
+            </div>
+
+            <!-- <p class="hint">ESC</p> -->
+
+            <div class="main-container">
+                <canvas id="canvas"></canvas>
+            </div>
+
+            <div class="buttons">
+                <button id="reset">
+                    Reset
+                </button>
+            </div>
+            <script type="text/javascript" src="./src/dda.js"></script>
+            <script type="text/javascript" src="./src/bresenham.js"></script>
+            <script type="text/javascript" src="./src/midpoint.js"></script>
+            <script type="text/javascript" src="./src/main.js"></script>
+        </div>
+
+    </body>
+
