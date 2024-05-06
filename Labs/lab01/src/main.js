@@ -225,12 +225,13 @@ const doKeyDown = function(e) {
     }
 
     var keyId = e.keyCode ? e.keyCode : e.which;
-    if (keyId == 27 && state == 1) { // esc
-        state = 2;
-        //console.log("state ", state);
-        //currentDrawingMode = DRAW_POINT;
-        painter.draw(painter.points[painter.points.length - 1]); 
-    } // clear red line
+
+    // if (keyId == 27 && state == 1) { // esc
+    //     state = 2;
+    //     //console.log("state ", state);
+    //     //currentDrawingMode = DRAW_POINT;
+    //     painter.draw(painter.points[painter.points.length - 1]); 
+    // } // clear red line
 }
 
 canvas.addEventListener('mousemove', doMouseMove);
